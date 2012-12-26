@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Sew-Color
-version:            1.03
+version:            1.04
 abstract:           Perl Module for giving rgb values for colours of varous manufactures embroidery thread
 author:
     - mark winder <markwin@cpan.org>

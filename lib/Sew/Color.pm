@@ -18,7 +18,7 @@ our @ISA = qw(Exporter);
 # will save memory.
 #package Sew::Color; 
 #
-our $VERSION='1.03'; 
+our $VERSION='1.04'; 
 #
 #use base 'Exporter';
 our @EXPORT=(
