@@ -1,9 +1,11 @@
-Sew-Color version 1.04 
+Sew-Color version 1.05 
 ======================
 
 This module Sew::Color provides some routines for converting between Brother and Madeira and others embroidery threads
 and the rgb color values. See the man page. It allows you to search color spaces to select a thread from 
 an rgb value, and to create certain custom searches. Its easily extensible to other manufacturers. 
+
+One bug has been corrected since 1.04 affectig the sat function, no new threads have been added. 
 
 Changes Since Version 1.00
 ==========================

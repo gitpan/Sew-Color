@@ -9,16 +9,7 @@ require Exporter;
 
 our @ISA = qw(Exporter);
 
-# Items to export into callers namespace by default. Note: do not export
-# names by default without a very good reason. Use EXPORT_OK instead.
-# Do not simply export all your public functions/methods/constants.
-
-# This allows declaration	use Sew::Color ':all';
-# If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
-# will save memory.
-#package Sew::Color; 
-#
-our $VERSION='1.04'; 
+our $VERSION='1.05'; 
 #
 #use base 'Exporter';
 our @EXPORT=(
@@ -314,17 +305,16 @@ sub mag
 sub sat
 {
   my ($r,$g,$b)=@_;  
-  my $s=0;  
+  my $s=0;  # saturation is zero for black.   
 
   my $w=min($r,$g,$b); # white component; 
+  my $m=mag($r,$g,$b); # magnetude of given colour 
 
   map { $_-=$w } ($r,$g,$b); 
 
   my $nw=mag($r,$g,$b); # non white component;
 
-  my $m=mag($r,$g,$b);
-
-  if ($m>1)
+  if ($m>=1)
   {
      $s=255*$nw/$m; 
   } 
@@ -476,6 +466,8 @@ is responsible for the Moss Green number 515 entry.
  There are many manufacturers not covered. 
 
  If you use this please drop me an email to say it has been useful (or not) to you. 
+
+ The sat() function generally returned 255 in version 1.04. This is fixed in 1.05 
 
 =head1 AUTHOR 
 

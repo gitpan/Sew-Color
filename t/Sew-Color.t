@@ -5,7 +5,7 @@
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
-use Test::More tests => 8;
+use Test::More tests => 9;
 BEGIN { use_ok('Sew::Color') };
 
 #########################
@@ -23,6 +23,7 @@ ok($c[2] ==168 ,'Red from rgb function' );
 ok(name('Brother','405') eq 'Blue','Test of English name'); 
 ok(code([''],10,83,168) eq '405' , 'Code Search Test'); 
 ok($_ eq 'xyz', 'Check to see is $_ maintained accross calls');  
+ok(sat(255,255,254)<1, "Check that nearly white is nearly unsaturated, catches an old bug."); 
 
 #ok($c[0] ==100 ,'Red from rgb function' ); 
 #ok($c[1] ==110 ,'Red from rgb function' ); 

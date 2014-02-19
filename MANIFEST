@@ -4,4 +4,3 @@ MANIFEST
 README
 t/Sew-Color.t
 lib/Sew/Color.pm
-META.yml                                 Module meta-data (added by MakeMaker)
